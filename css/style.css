@@ -303,57 +303,6 @@ button {
 }
 
 /* ==========================================================================
-   Top Accreditation Bar (Desktop Only)
-   ========================================================================== */
-.top-bar {
-  background-color: #0A0D12;
-  border-bottom: 1px solid rgba(181, 130, 74, 0.15);
-  font-size: 0.82rem;
-  padding: 0.55rem 0;
-  color: rgba(247, 244, 239, 0.75);
-}
-
-.top-bar-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top-bar-left {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.top-meta-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.top-meta-item span.highlight {
-  color: var(--color-accent);
-  font-weight: 600;
-}
-
-.top-bar-right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.top-bar-right a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: rgba(247, 244, 239, 0.75);
-}
-
-.top-bar-right a:hover {
-  color: var(--color-accent);
-}
-
-/* ==========================================================================
    Header & Desktop / Mobile Navigation (Kumud Pure Architecture)
    ========================================================================== */
 .header, .site-header {
@@ -478,6 +427,13 @@ button {
   padding: 0.7rem 1.4rem;
   border-radius: var(--radius-xs);
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quote-btn svg {
+  flex-shrink: 0;
 }
 
 .mobile-menu-toggle {
@@ -1203,10 +1159,6 @@ button {
 }
 
 @media (max-width: 900px) {
-  .top-bar {
-    display: none;
-  }
-
   .desktop-nav {
     display: none !important;
   }

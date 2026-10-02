@@ -75,13 +75,16 @@ function initHeaderScroll() {
   const header = document.querySelector('.header, .site-header');
   if (!header) return;
 
-  window.addEventListener('scroll', () => {
+  const updateHeader = () => {
     if (window.scrollY > 40) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
-  }, { passive: true });
+  };
+
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
 }
 
 /* ==========================================================================

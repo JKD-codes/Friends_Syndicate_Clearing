@@ -59,6 +59,13 @@ function initMobileNavigation() {
       closeMenu();
     }
   });
+
+  // Close menu if viewport expanded past mobile/tablet breakpoint
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 991 && mobileNav.classList.contains('mobile-open')) {
+      closeMenu();
+    }
+  });
 }
 
 /* ==========================================================================
